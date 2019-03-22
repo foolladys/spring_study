@@ -7,6 +7,6 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean id="greeter" class="aaaa.chap02.Greeter" />
+	<bean id="greeter" class="org.flady.jdbc.spring.Greeter" />
 
 </beans>
