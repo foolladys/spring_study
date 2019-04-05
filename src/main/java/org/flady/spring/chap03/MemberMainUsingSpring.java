@@ -1,6 +1,6 @@
 package org.flady.spring.chap03;
 
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MemberMainUsingSpring {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = new ClassPathXmlApplicationContext(
+		ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"chap03.xml");
 		MemberRegisterService regService = ctx.getBean("memberRegisterService",
 				MemberRegisterService.class);
@@ -25,5 +25,6 @@ public class MemberMainUsingSpring {
 
 		// 회원 등록
 		regService.regist(req);
+		ctx.close();
 	}
 }

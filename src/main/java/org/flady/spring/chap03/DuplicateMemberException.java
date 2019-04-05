@@ -5,6 +5,7 @@ package org.flady.spring.chap03;
  * 
  * @author Jacob
  */
+
 public class DuplicateMemberException extends RuntimeException {
 
 	public DuplicateMemberException() {
